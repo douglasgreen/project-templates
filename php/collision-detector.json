@@ -1,0 +1,12 @@
+{
+    "scanPaths": [
+        "bin",
+        "packages",
+        "public",
+        "src"
+    ],
+    "fileExtensions": [
+        "php"
+    ],
+    "ignoreParseFailures": true
+}
