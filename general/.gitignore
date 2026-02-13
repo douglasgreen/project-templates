@@ -1,0 +1,54 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Runtime & Build Artifacts
+/var/
+/public/assets/css/
+/public/assets/js/
+!/public/assets/js/modules/.gitkeep
+/public/assets/*.css
+/public/assets/*.js
+/public/assets/*.map
+
+# Environment & Local Config
+/config/parameters.yml
+.env
+.env.local
+
+# IDE
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHPUnit
+/.phpunit.cache
+.phpunit.result.cache
+/phpunit.xml
+
+# Composer
+/composer.phar
+
+# Logs
+*.log
+
+# Linting/formatting cache
+.php-cs-fixer.cache
+var/cache/.php-cs-fixer.cache
+var/cache/.phpunit.cache
+var/cache/phpstan
+.eslintcache
+
+# Test results
+var/test-results/
+test-results/
+playwright-report/
+
+# TypeScript output (before bundling)
+*.tsbuildinfo
