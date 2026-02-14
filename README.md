@@ -1,5 +1,9 @@
 # project-templates
 
+## Todo
+
+Decide on eslint.config.mjs vs. .eslintrc.json.
+
 ## Harmonization Notes
 
 Where standards disagreed, I made these typical-value choices:

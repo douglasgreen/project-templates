@@ -2,10 +2,13 @@
 
 # Project-specific settings (put your files here)
 
+# Bower
+bower_components/
+
 # Build directories
 build/
 .cache/
-.next
+.next/
 
 # Composer
 vendor/
@@ -40,4 +43,3 @@ __pycache__/
 /.env.local.php
 parameters.yml
 /var/
-
