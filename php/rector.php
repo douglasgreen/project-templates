@@ -38,8 +38,8 @@ return RectorConfig::configure()
 
         // These tags are still needed.
         RemoveUselessParamTagRector::class,
-        RemoveUselessVarTagRector::class,
         RemoveUselessReturnTagRector::class,
+        RemoveUselessVarTagRector::class,
     ])
     ->withRules([
         DeclareStrictTypesRector::class,
