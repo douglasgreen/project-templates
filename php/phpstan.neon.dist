@@ -7,20 +7,6 @@ parameters:
     - var
     - vendor
   
-  # Strict analysis settings
-  checkUninitializedProperties: true
-  checkExplicitMixed: true
-  reportMaybes: true
-  checkBenevolentUnionTypes: true
-  rememberPossiblyImpureFunctionValues: false
-  reportPossiblyNonexistentGeneralArrayOffset: true
-  reportPossiblyNonexistentConstantArrayOffset: true
-  
-  # Bleeding edge for latest features
-  bleedingEdge:
-    alwaysTrueAlwaysReported: true
-    strictUnions: true
-  
   # Framework extensions (uncomment as needed)
   # symfony:
   #   container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
