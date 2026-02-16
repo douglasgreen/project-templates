@@ -1,6 +1,7 @@
 <?php
 
 use Rector\Config\RectorConfig;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
 use Rector\DeadCode\Rector\Property\RemoveUselessVarTagRector;
 use Rector\Php81\Rector\ClassMethod\NewInInitializerRector;
@@ -36,6 +37,7 @@ return RectorConfig::configure()
         ],
 
         // These tags are still needed.
+        RemoveUselessParamTagRector::class,
         RemoveUselessVarTagRector::class,
         RemoveUselessReturnTagRector::class,
     ])
