@@ -5,6 +5,7 @@ use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
 use Rector\DeadCode\Rector\Property\RemoveUselessVarTagRector;
 use Rector\Php81\Rector\ClassMethod\NewInInitializerRector;
+use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
 use Rector\TypeDeclaration\Rector\StmtsAwareInterface\DeclareStrictTypesRector;
 use Rector\ValueObject\PhpVersion;
 
@@ -31,6 +32,9 @@ return RectorConfig::configure()
         symfony: true,
     )
     ->withSkip([
+        // Empty is OK.
+        DisallowedEmptyRuleFixerRector::class,
+
         // This rule always injects Session into AppContainer, breaking unit tests.
         NewInInitializerRector::class => [
             __DIR__ . '/src/AppContainer.php',
