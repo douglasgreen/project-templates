@@ -1,8 +1,10 @@
 openai-api-base: https://openrouter.ai/api/v1
-model: openrouter/z-ai/glm-5
-model-settings-file: .aider.glm-5.yml  # Optional: Points to your custom model settings file
 
 # Alternatives
 #
-# model: openrouter/google/gemini-3-flash-preview
-# model-settings-file: .aider.gemini-3-flash.yml
+#model: openrouter/z-ai/glm-5
+#model-settings-file: .aider.glm-5.yml
+#model: openrouter/google/gemini-3-flash-preview
+#model-settings-file: .aider.gemini-3-flash.yml
+model: openrouter/google/gemini-3.1-pro-preview
+model-settings-file: .aider.gemini-3.1-pro.yml

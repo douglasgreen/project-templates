@@ -1,0 +1,12 @@
+- name: openrouter/google/gemini-3.1-pro-preview
+  edit_format: diff-fenced # Recommended for Gemini Pro models to handle fenced diffs better than standard diff
+  use_repo_map: true # Provides project structure context to the model
+  use_temperature: false # Disables randomness for more deterministic reasoning outputs (ideal for this thinking model)
+  streaming: true # Enables real-time token-by-token responses
+  extra_params: # Provider-specific options passed to the API
+    max_tokens: 32768 # Adjust based on model limits; Gemini Pro variants often support up to 8192-32000 output tokens, but confirm with OpenRouter docs if needed
+    top_p: 0.95 # Controls output diversity
+  accepts_settings: # Enables advanced reasoning controls (this model excels at configurable thinking)
+    - thinking_tokens # Allows specifying tokens for internal thinking steps
+    - reasoning_effort # Supports effort levels like 'minimal', 'low', 'medium', 'high' for agentic/coding workflows; note the new 'medium' level in 3.1
+  reasoning_tag: think # Wraps reasoning steps in <think> tags for structured output
