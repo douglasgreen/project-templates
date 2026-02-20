@@ -1,3 +1,6 @@
+// version: 1.0.0
+// modified: 2026-02-20
+
 // eslint.config.mjs
 import { defineConfig } from "eslint/config";
 import js from "@eslint/js";
@@ -11,14 +14,14 @@ import globals from "globals";
 export default defineConfig([
   // Base JavaScript
   js.configs.recommended,
-  
+
   // TypeScript strict
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.strictTypeChecked,
-  
+
   // Vue 3
   ...pluginVue.configs["flat/recommended"],
-  
+
   // Security baseline
   {
     plugins: { security: pluginSecurity },
@@ -31,7 +34,7 @@ export default defineConfig([
       "security/detect-pseudoRandomBytes": "error",
     }
   },
-  
+
   // Code quality
   {
     plugins: { unicorn: pluginUnicorn },
@@ -41,7 +44,7 @@ export default defineConfig([
       "unicorn/no-array-reduce": "off",
     }
   },
-  
+
   // Global settings
   {
     languageOptions: {
@@ -56,7 +59,7 @@ export default defineConfig([
       }
     }
   },
-  
+
   // File-specific overrides
   {
     files: ["tests/**/*.ts", "tests/**/*.js", "**/*.spec.ts", "**/*.test.ts"],
@@ -68,7 +71,7 @@ export default defineConfig([
       "playwright/expect-expect": "error",
     }
   },
-  
+
   // Vue-specific rules
   {
     files: ["**/*.vue"],
@@ -79,7 +82,7 @@ export default defineConfig([
       "vue/attributes-order": "warn",
     }
   },
-  
+
   // Accessibility for Vue/React
   {
     files: ["**/*.{vue,jsx,tsx}"],
@@ -94,7 +97,7 @@ export default defineConfig([
       "jsx-a11y/tabindex-no-positive": "error",
     }
   },
-  
+
   // TypeScript strictness
   {
     rules: {
@@ -108,7 +111,7 @@ export default defineConfig([
       "no-new-func": "error",
     }
   },
-  
+
   // Ignores
   {
     ignores: [

@@ -1,22 +1,20 @@
+# version: 1.0.0
+# modified: 2026-02-20
+
 parameters:
   level: 8
   paths:
+    - bin
     - src
     - tests
   excludePaths:
     - var
     - vendor
-  
+
   # Framework extensions (uncomment as needed)
   # symfony:
   #   container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
-  
+
   # Doctrine extension (uncomment as needed)
   # doctrine:
   #   objectManagerLoader: tests/object-manager.php
-
-includes:
-  - vendor/phpstan/phpstan-strict-rules/rules.neon
-  - vendor/shipmonk/dead-code-detector/rules.neon
-
-

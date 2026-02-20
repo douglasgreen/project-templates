@@ -1,12 +1,14 @@
 {
-    "scanPaths": [
-        "bin",
-        "packages",
-        "public",
-        "src"
-    ],
-    "fileExtensions": [
-        "php"
-    ],
-    "ignoreParseFailures": true
+  "_version": "1.0.0",
+  "_modified": "2026-02-20",
+  "scanPaths": [
+    "bin",
+    "packages",
+    "public",
+    "src"
+  ],
+  "fileExtensions": [
+    "php"
+  ],
+  "ignoreParseFailures": true
 }

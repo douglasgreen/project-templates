@@ -1,3 +1,6 @@
+// version: 1.0.0
+// modified: 2026-02-20
+
 // playwright.config.ts
 import { defineConfig, devices } from '@playwright/test';
 

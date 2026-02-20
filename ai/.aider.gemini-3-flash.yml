@@ -1,3 +1,6 @@
+# version: 1.0.0
+# modified: 2026-02-20
+
 - name: openrouter/google/gemini-3-flash-preview
   edit_format: diff # Format for code edits (diff is efficient for programming tasks; Gemini 3 Flash handles it well)
   use_repo_map: true # Provides project structure context to the model

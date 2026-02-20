@@ -1,4 +1,6 @@
 {
+  "_version": "1.0.0",
+  "_modified": "2026-02-20",
   "default": true,
   "MD003": { "style": "atx" },
   "MD004": { "style": "dash" },
@@ -6,7 +8,7 @@
   "MD009": true,
   "MD010": true,
   "MD012": true,
-  "MD013": { 
+  "MD013": {
     "line_length": 100,
     "heading_line_length": 80,
     "code_block_line_length": 120,

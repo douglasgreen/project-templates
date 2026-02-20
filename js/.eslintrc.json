@@ -1,18 +1,20 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-        "comma-dangle": "off",
-        "indent": ["error", 4],
-        "operator-linebreak": ["error", "after"],
-        "quotes": "off",
-        "semi": "off",
-        "space-before-function-paren": "off"
-    }
+  "_version": "1.0.0",
+  "_modified": "2026-02-20",
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "indent": ["error", 4],
+    "operator-linebreak": ["error", "after"],
+    "quotes": "off",
+    "semi": "off",
+    "space-before-function-paren": "off"
+  }
 }

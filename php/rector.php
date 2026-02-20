@@ -1,4 +1,6 @@
 <?php
+// version: 1.0.0
+// modified: 2026-02-20
 
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
@@ -11,8 +13,6 @@ use Rector\ValueObject\PhpVersion;
 
 return RectorConfig::configure()
     ->withPaths([
-        __DIR__ . '/.php-cs-fixer.php',
-        __DIR__ . '/rector.php',
         __DIR__ . '/bin',
         __DIR__ . '/public',
         __DIR__ . '/src',

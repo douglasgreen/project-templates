@@ -1,3 +1,6 @@
+# version: 1.0.0
+# modified: 2026-02-20
+
 # Export ignore (don't include in composer archive or git archive)
 /.github export-ignore
 /.gitlab-ci.yml export-ignore

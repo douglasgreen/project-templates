@@ -1,4 +1,6 @@
 {
+  "_version": "1.0.0",
+  "_modified": "2026-02-20",
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
