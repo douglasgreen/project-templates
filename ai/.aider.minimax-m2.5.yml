@@ -1,0 +1,15 @@
+# version: 1.0.0
+# modified: 2026-02-21
+
+- name: openrouter/minimax/minimax-m2.5
+  edit_format: diff # Format for code edits (diff is efficient for programming tasks)
+  use_repo_map: true # Provides project structure context to the model
+  use_temperature: false # Disables randomness for more deterministic reasoning outputs
+  streaming: true # Enables real-time token-by-token responses
+  extra_params: # Provider-specific options passed to the API
+    max_tokens: 65536 # Adjusted for MiniMax M2.5's max output limit; context window is 196k tokens
+    top_p: 0.95 # Controls output diversity
+  accepts_settings: # Enables advanced reasoning controls
+    - thinking_tokens # Allows specifying tokens for internal thinking steps
+    - reasoning_effort # Supports effort levels like 'low', 'medium', 'high'
+  reasoning_tag: think # Wraps reasoning steps in <think> tags for structured output
