@@ -1,77 +1,26 @@
 {
-  "_version": "1.0.0",
-  "_modified": "2026-02-20",
-  "name": "",
+  "_version": "1.1.0",
+  "_modified": "2026-02-22",
+  "name": "owner/package",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
-  "description": "",
+  "description": "***",
   "scripts": {
-    "prebuild": "npm run create:dirs && npm run lint",
-    "build": "npm-run-all typecheck build:js build:css",
-    "create:dirs": "mkdirp public/assets/css public/assets/js",
-    "typecheck": "tsc --noEmit",
-    "build:js": "npm-run-all build:js:vendor build:js:app",
-    "build:js:vendor": "esbuild resources/assets/ts/vendor.ts --bundle --minify --sourcemap --outfile=public/assets/js/vendor.min.js --target=es2020",
-    "build:js:app": "esbuild resources/assets/ts/app.ts --bundle --minify --sourcemap --outfile=public/assets/js/app.min.js --target=es2020",
-    "build:css": "npm-run-all build:css:vendor build:css:app",
-    "build:css:vendor": "esbuild resources/assets/css/vendor.css --bundle --minify --outfile=public/assets/css/vendor.min.css --loader:.woff=dataurl --loader:.woff2=dataurl --loader:.ttf=dataurl",
-    "build:css:app": "concat-cli -f resources/assets/css/base/*.css resources/assets/css/browser/*.css resources/assets/css/case-study/*.css resources/assets/css/drag-and-drop/*.css resources/assets/css/error/*.css resources/assets/css/help/*.css resources/assets/css/multiple-choice/*.css resources/assets/css/numerical-entry/*.css resources/assets/css/proof/*.css resources/assets/css/search/*.css resources/assets/css/select-from-list/*.css -o public/assets/css/app.css && cleancss -o public/assets/css/app.min.css public/assets/css/app.css",
-    "lint": "npm-run-all lint:*",
-    "lint:ts": "eslint resources/assets/ts --max-warnings 0",
-    "lint:css": "stylelint 'resources/assets/css/**/*.css'",
-    "lint:php": "composer run lint",
-    "lint:fix": "npm-run-all lint:fix:*",
-    "lint:fix:ts": "eslint resources/assets/ts --fix",
-    "lint:fix:css": "stylelint 'resources/assets/css/**/*.css' --fix",
-    "lint:fix:php": "composer run lint:fix",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:md",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:md": "markdownlint \"**/*.md\"",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui",
-    "test:e2e:debug": "playwright test --debug",
-    "watch": "npm-watch",
-    "clean": "rimraf public/assets/css public/assets/js"
-  },
-  "watch": {
-    "build:css": {
-      "patterns": [
-        "resources/assets/css"
-      ],
-      "extensions": "css"
-    },
-    "build:js": {
-      "patterns": [
-        "resources/assets/ts"
-      ],
-      "extensions": "ts,js"
-    }
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@playwright/test": "^1.58.1",
-    "@types/node": "^25.2.0",
-    "@zackad/prettier-plugin-twig": "^0.16.3",
-    "clean-css-cli": "^5.6.3",
-    "concat-cli": "^4.0.0",
-    "copyfiles": "^2.4.1",
-    "esbuild": "^0.27.2",
-    "eslint": "^9.39.2",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "mkdirp": "^3.0.1",
-    "npm-run-all": "^4.1.5",
-    "npm-watch": "^0.11.0",
+    "markdownlint-cli": "^0.47.0",
     "prettier": "^3.8.1",
-    "rimraf": "^5.0.5",
-    "stylelint": "^16.26.1",
-    "stylelint-config-standard": "^36.0.1",
-    "terser": "^5.31.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0"
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.8",
-    "bootstrap-icons": "^1.13.1"
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
