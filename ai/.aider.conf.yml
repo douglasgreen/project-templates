@@ -1,15 +1,24 @@
-# version: 1.1.0
-# modified: 2026-02-21
+# version: 1.2.0
+# modified: 2026-02-22
+
+read: AGENTS.md
 
 openai-api-base: https://openrouter.ai/api/v1
 
-# Alternatives
-#
-model: openrouter/minimax/minimax-m2.5
-model-settings-file: .aider.minimax-m2.5.yml
+# Alternative models
+
+# Use for bug fixes and refactoring
+#model: openrouter/minimax/minimax-m2.5
+#model-settings-file: .aider.minimax-m2.5.yml
+
+# Use for front-end design and harder bug fixes
 #model: openrouter/z-ai/glm-5
 #model-settings-file: .aider.glm-5.yml
+
+# Use for fast, low-level bug fixes, cleanup, and large context work
 #model: openrouter/google/gemini-3-flash-preview
 #model-settings-file: .aider.gemini-3-flash.yml
+
+# Use for architecture and the hardest bug fixes
 #model: openrouter/google/gemini-3.1-pro-preview
 #model-settings-file: .aider.gemini-3.1-pro.yml
