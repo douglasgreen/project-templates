@@ -1,5 +1,5 @@
-// version: 1.0.0
-// modified: 2026-02-20
+// version: 1.0.1
+// modified: 2026-02-22
 
 // eslint.config.mjs
 import { defineConfig } from 'eslint/config';
