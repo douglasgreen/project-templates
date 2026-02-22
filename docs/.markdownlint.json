@@ -19,7 +19,18 @@
   "MD025": { "front_matter_title": "" },
   "MD026": { "punctuation": ".,;:!?" },
   "MD029": { "style": "ordered" },
-  "MD033": { "allowed_elements": ["details", "summary", "code", "strong", "em", "a", "img", "br"] },
+  "MD033": {
+    "allowed_elements": [
+      "details",
+      "summary",
+      "code",
+      "strong",
+      "em",
+      "a",
+      "img",
+      "br"
+    ]
+  },
   "MD034": true,
   "MD035": { "style": "---" },
   "MD036": false,

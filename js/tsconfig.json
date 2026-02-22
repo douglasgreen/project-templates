@@ -44,10 +44,5 @@
     "tests/**/*.ts",
     "env.d.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "coverage",
-    "playwright-report"
-  ]
+  "exclude": ["node_modules", "dist", "coverage", "playwright-report"]
 }
