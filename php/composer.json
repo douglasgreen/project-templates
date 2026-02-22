@@ -1,26 +1,22 @@
 {
-  "_version": "1.0.0",
-  "_modified": "2026-02-20",
-  "name": "",
-  "description": "",
+  "_version": "1.1.0",
+  "_modified": "2026-02-22",
+  "name": "owner/project",
+  "description": "***",
   "type": "project",
   "license": "MIT",
   "require": {
     "php": "^8.3"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.93.1",
-    "phpcompatibility/php-compatibility": "*",
-    "phpstan/phpstan": "^2.1.38",
-    "phpunit/phpunit": "^12.5.8",
-    "rector/rector": "^2.3.5",
-    "roave/security-advisories": "dev-latest",
-    "shipmonk/dead-code-detector": "^0.13.5",
-    "shipmonk/name-collision-detector": "^2.1.1"
+    "friendsofphp/php-cs-fixer": "^3.94.2",
+    "phpstan/phpstan": "^2.1.39",
+    "phpunit/phpunit": "^12.5.14",
+    "rector/rector": "^2.3.8"
   },
   "autoload": {
     "psr-4": {
-      "": "src/"
+      "App\\": "src/"
     }
   },
   "config": {
@@ -30,12 +26,6 @@
     "sort-packages": true
   },
   "scripts": {
-    "post-install-cmd": ["@build-assets"],
-    "post-update-cmd": ["@build-assets"],
-    "build-assets": [
-      "npm install --no-save",
-      "npm run build"
-    ],
     "lint": [
       "php-cs-fixer fix --dry-run --verbose",
       "phpstan analyse",
@@ -47,6 +37,10 @@
     ],
     "test": ["phpunit"],
     "test:unit": ["phpunit --testsuite=Unit"],
-    "test:integration": ["phpunit --testsuite=Integration"]
+    "test:integration": ["phpunit --testsuite=Integration"],
+    "qa": [
+      "@lint",
+      "@test"
+    ]
   }
 }
